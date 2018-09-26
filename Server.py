@@ -39,8 +39,7 @@ while True:
                     byteFile = f.read(1024)
                 f.close()
                 print("done sending")
-                time.sleep(1)
-                conn.send(bytes("done", 'utf-8'))
+                recordingThread = RecordingThread()
                 #connection=False
             if message=="close":
                 print("Closing the connection...")
