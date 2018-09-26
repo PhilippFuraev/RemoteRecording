@@ -15,7 +15,6 @@ while connection:
         sock.send(byteMessage)
         data = sock.recv(1024)
         serverMessage=data.decode()
-        print (serverMessage)
         if (serverMessage[0:9]=='packages:'):
             numOfPackages = int(serverMessage[9:len(serverMessage)])
             print("downoloading speech...")
